@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Arildo Oliveira | Portfolio</title>
+    <meta name="description" content="Arildo Oliveira - Portfolio">
+    <meta name="author" content="Arildo Oliveira">
+
+    <!-- Mobile Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Web Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,300&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:700,400,300' rel='stylesheet' type='text/css'>
+
+    <!-- Bootstrap core CSS -->
+    <link href="media/portfolio/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Font Awesome CSS -->
+    <link href="media/portfolio/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Plugins -->
+    <link href="media/portfolio/css/animations.css" rel="stylesheet">
+
+    <!-- Worthy core CSS file -->
+    <link href="media/portfolio/css/style.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="media/portfolio/css/custom.css" rel="stylesheet">
+
+    <!-- Colorbox CSS -->
+    <link href="media/portfolio/colorbox/colorbox.css" rel="stylesheet">
+</head>
+<body class="no-trans">
+    <div class="scrollToTop"><i class="icon-up-open-big"></i></div>
+
+    <!-- header start -->
+    <header class="header fixed clearfix navbar navbar-fixed-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="header-left clearfix">
+                        <div class="site-name-and-slogan smooth-scroll">
+                            <div class="site-name"><a href="#banner">Arildo Oliveira</a></div>
+                            <div class="site-slogan"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- banner start -->
+    <div id="banner" class="banner">
+        <div class="banner-image"></div>
+    </div>
+
+    <!-- section start -->
+	<div class="section">
+		<div class="container">
+			<h1 class="text-center title" id="portfolio">Portfolio</h1>
+			<div class="separator"></div>
+			<br/>
+			<div class="row object-non-visible" data-animation-effect="fadeIn">
+				<div class="col-md-12">
+				    <div class="isotope-container row grid-space-20">
+                        <!-- portfolio items -->
+                        {% block content %}
+                            {% for item in texto %}
+                                {% if item.status %}
+                                    <div class="col-sm-6 col-md-3 isotope-item">
+								    <div class="image-box">
+									    <div class="overlay-container">
+                                            <img src="media/{{ item.image }}" alt="portfolio_img">
+										    <a class="overlay colorbox_item" href="media/{{ item.image }}">
+											    <i class="fa fa-search-plus"></i>
+											    <span></span>
+										    </a>
+								    	</div>
+							    		<a class="btn btn-default btn-block colorbox_item" href="media/{{ item.image }}">{{ item.title }}</a>
+				    				</div>
+
+				    			</div>
+                                {% endif %}
+                            {% endfor %}
+                        {% endblock %}
+                    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <!-- section start -->
+    <div class="translucent-bg blue">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h1 class="text-center">HTML5 | CSS3 | SASS | PHP | JavaScript | jQuery | jQuery UI | WordPress | Silex | Python | Django | Gunicorn | CSS Sprites | Apache | Nginx | Grunt</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer start -->
+    <footer id="footer">
+        <div class="footer section translucent-bg bg-image-2">
+            <div class="container object-non-visible" data-animation-effect="fadeIn">
+                <h1 class="title text-center" id="contact">Contato</h1>
+                <div class="space"></div>
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <div class="footer-content">
+                            <ul class="list-icons">
+                                <li><i class="fa fa-phone pr-10"></i> 012 98156-8438</li>
+                                <li><i class="fa fa-envelope-o pr-10"></i> arildo.o.s@outlook.com</li>
+                            </ul>
+                            <ul class="social-links">
+                                <li class="facebook"><a target="_blank" href="https://www.facebook.com/arildo.oliveirasilva"><i class="fa fa-facebook"></i></a></li>
+                                <li class="linkedin"><a target="_blank" href="http://br.linkedin.com/in/arildooliveira"><i class="fa fa-linkedin"></i></a></li>
+                                <li class="github"><a target="_blank" href="https://github.com/arildoosilva"><i class="fa fa-github"></i></a></li>
+                                <li class="googleplus"><a target="_blank" href="https://plus.google.com/u/0/116955822820036055829"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- .subfooter start -->
+        <!-- <div class="subfooter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="text-center">Made with Django by Arildo Oliveira</p>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+    </footer>
+
+    <!-- Jquery and Bootstap core js files -->
+    <script type="text/javascript" src="media/portfolio/js/jquery.min.js"></script>
+    <script type="text/javascript" src="media/portfolio/js/bootstrap.min.js"></script>
+
+    <!-- Modernizr javascript -->
+    <script type="text/javascript" src="media/portfolio/js/modernizr.js"></script>
+
+    <!-- Isotope javascript -->
+    <script type="text/javascript" src="media/portfolio/js/isotope/isotope.pkgd.min.js"></script>
+
+    <!-- Backstretch javascript -->
+    <script type="text/javascript" src="media/portfolio/js/jquery.backstretch.min.js"></script>
+
+    <!-- Appear javascript -->
+    <script type="text/javascript" src="media/portfolio/js/jquery.appear.js"></script>
+
+    <!-- Initialization of Plugins -->
+    <script type="text/javascript" src="media/portfolio/js/template.js"></script>
+
+    <!-- Custom Scripts -->
+    <script type="text/javascript" src="media/portfolio/js/custom.js"></script>
+
+    <!-- Colorbox javascript -->
+    <script type="text/javascript" src="media/portfolio/colorbox/jquery.colorbox-min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+                $(".colorbox_item").colorbox({transition:"fade"});
+        });
+    </script>
+
+    {% block background %}
+        {% for item in background %}
+            {% if item.status %}
+                <script type="text/javascript">
+                    $(document).ready(function(){
+	                    $(".banner-image").backstretch('media/{{ item.image }}');
+                    });
+                </script>
+            {% endif %}
+        {% endfor %}
+    {% endblock %}
+</body>
+</html>
